@@ -1,12 +1,10 @@
-import static javax.swing.JOptionPane.*;
-
 class Demo{
 public static void main(String[] args){
-    System.out.println("User Defined Iterations");
-    int i = Integer.parseInt(showInputDialog("Enter a number for i: "));
+    System.out.println("Do While with arrays");
+    int[] a = new int[] {10, 20, 30, 40, 50};
+    int i = 0 ;
     do{
-    System.out.println("Working" + i);
-    i--;
- }while(i > 0);
-}
-}
+        System.out.println(a[i]);
+    }while (++i < 5);
+    }
+    }
