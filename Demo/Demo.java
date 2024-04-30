@@ -1,15 +1,12 @@
+import static javax.swing.JOptionPane.*;
+
 class Demo{
 public static void main(String[] args){
-    int i = 0 ;
-
-do{
-   System.out.println("-----");
-   if ( i == 1)
-   {
-      System.out.println("#####");
-    }
-    System.out.println("-----");
-    i = i + 1;
- }while(i < 3);
+    System.out.println("User Defined Iterations");
+    int i = Integer.parseInt(showInputDialog("Enter a number for i: "));
+    do{
+    System.out.println("Working" + i);
+    i--;
+ }while(i > 0);
 }
 }
