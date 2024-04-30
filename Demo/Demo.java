@@ -1,17 +1,21 @@
 import static javax.swing.JOptionPane.*;
 class Demo{
 public static void main(String[] args){
-   String name = showInputDialog("Enter your name");
-   int marks = Integer.parseInt(showInputDialog("Enter your marks"));
-   grader(name,marks);
-}
+    System.out.println("Namaste");
 
-public static void grader(String name, int marks){
-   if (marks >= 35) {
-       showMessageDialog(null,name + " You have passed");
-   }
-   else {
-       showMessageDialog(null,name + " You have failed");
-   }
+    System.out.println("Namaste");
+    
+    System.out.println("Namaste");
+    
+    
+    int i = 0 ;
+    
+    do{
+    
+        System.out.println("Pranam");
+    
+        i++;
+    
+    }while(i < 3);
 }
 }
