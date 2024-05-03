@@ -1,2 +1,5 @@
 one
 The Highest String is one
+Hi
+Appending file
+The Highest String is Hi

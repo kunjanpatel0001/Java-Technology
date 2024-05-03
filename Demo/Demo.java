@@ -23,8 +23,8 @@ public class Demo{
            str = kin.readLine();
        }
 
-       FileWriter fw = new FileWriter("output.txt"); //opens the file for writing
-    //    FileWriter fw = new FileWriter("output.txt", true);   // opens to append in the file
+    //    FileWriter fw = new FileWriter("output.txt"); //opens the file for writing
+       FileWriter fw = new FileWriter("output.txt", true);   // opens to append in the file
        BufferedWriter bw = new BufferedWriter(fw);
        PrintWriter pw = new PrintWriter(bw, true);
 
