@@ -1,19 +1,22 @@
-import javax.swing.*;
-
 public class Demo {
    public static void main(String[] args) {
-      String number1 = JOptionPane.showInputDialog(
-        "Enter Number1"
-       );
-       String number2 = JOptionPane.showInputDialog(
-        "Enter Number2"
-       );
-       int num1 = Integer.parseInt(number1);
-       int num2 = Integer.parseInt(number2);
-       int sum = num1 + num2;
-       JOptionPane.showMessageDialog(
-       null,
-        "Sum = " + sum
-       );
+        System.out.println("switch case and break statement ");
+       char ch = 'c';
+        switch(ch){
+            case 'a':
+                System.out.println("ch is a");
+                break;
+            case 'b':
+                System.out.println("ch is b");
+                break;
+            case 'c':
+                System.out.println("ch is c");
+                break;
+            case 'd':
+                System.out.println("ch is d");
+                break;
+            default:
+                System.out.println("default");
+        }
    } 
 }
