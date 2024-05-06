@@ -2,34 +2,30 @@ public class Demo {
     static int count;
     static String CommandSequence = "iiiddiipriiiidp";
    public static void main(String[] args) {
-        System.out.println("Modular Counter");
-        int length = CommandSequence.length();
-        for(int j = 0; j < length; j++){
-            switch(CommandSequence.charAt(j)){
-                case 'i':
-                    Counter.increment();
-                    break;
-                case 'd':
-                    Counter.decrement();
-                    break;
-                case 'p':
-                    Counter.print();
-                    break;
-                case 'r':
-                    Counter.reset();
-                    break;
-            }
-        }
+        System.out.println("Counter with Range Checking");
+        System.out.println(Counter.getCount());
+
+       Counter.increment();
+
+       Counter.increment();
+
+       System.out.println(Counter.getCount());
+
+       Counter.decrement();
+
+       System.out.println(Counter.getCount());
    } 
 }
 
 class Counter{
-    static int count = 0;
+    private static int count;
     static void increment(){
+        if (count < 100)
         count++;
     }
 
     static void decrement(){
+        if (count > 0)
         count--;
     }
     static void print(){
@@ -37,5 +33,8 @@ class Counter{
     }
     static void reset(){
         count = 0;
+    }
+    static int getCount(){
+        return count;
     }
 }
