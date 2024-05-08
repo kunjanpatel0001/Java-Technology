@@ -3,6 +3,10 @@ public class Demo {
         System.out.println("Instance Method & this keyword");
         C1 obj1 = new C1();
         obj1.m1();
+        C1 obj2 = new C1();
+        obj2.a = 20;
+        obj2.b = 20;
+        obj2.m1();
     }
 }
 
