@@ -1,20 +1,32 @@
 public class Demo {
     public static void main(String[] args) {
-
-        System.out.println("OBJECTS");
-        C1 obj1 = new C1();
-        System.out.println(obj1.a);
-        C1 obj2 = new C1();
-        System.out.println(obj2.a);
-        obj1.a = 10;
-        obj2.a = 20;
-        System.out.println(obj1.a);
-        System.out.println(obj2.a);
+        System.out.println("Counter using Instance methods and objects and data hiding");
+        Counter C1 = new Counter();
+        C1.increment();
+        C1.decrement();
+        C1.reset();
+        System.out.println(C1.getCount());
+    }
 }
-}
-class C1{
-    int a;
-    int b;
-    static int c;
 
+class Counter{
+    private int count;
+
+    void increment(){
+        if(this.count < 100){
+            this.count++;
+        }
+    }
+    void decrement(){
+        if(this.count > 0){
+        this.count--;
+        }
+    }
+    void reset(){
+        this.count = 0;
+    }
+
+    int getCount(){
+        return this.count;
+    }
 }
