@@ -1,32 +1,69 @@
-public class Demo {
+class C1 {
+
+    int a;
+
+    int b;
+
+ }
+
+
+ class C2 {
+
+    int a;
+
+    int b;
+
+    int c;
+
+    int d;
+
+ }
+
+
+ class Reusablity {
+
     public static void main(String[] args) {
-        System.out.println("Counter using Instance methods and objects and data hiding");
-        Counter C1 = new Counter();
-        C1.increment();
-        C1.decrement();
-        C1.reset();
-        System.out.println(C1.getCount());
-    }
-}
 
-class Counter{
-    private int count;
+        C1 obj1 = new C1();
 
-    void increment(){
-        if(this.count < 100){
-            this.count++;
-        }
-    }
-    void decrement(){
-        if(this.count > 0){
-        this.count--;
-        }
-    }
-    void reset(){
-        this.count = 0;
+        obj1.a = 1;
+
+        obj1.b = 2;
+
+        printc1(obj1);
+
+        C2 obj2 = new C2();
+
+        obj2.a = 10;
+
+        obj2.b = 20;
+
+        obj2.c = 30;
+
+        obj2.d = 40;
+
+        printc2(obj2);
+
     }
 
-    int getCount(){
-        return this.count;
+    static void printc1(C1 c) {
+
+        System.out.println(c.a);
+
+        System.out.println(c.b);
+
     }
-}
+
+    static void printc2(C2 c) {
+
+        System.out.println(c.a);
+
+        System.out.println(c.b);
+
+        System.out.println(c.c);
+
+        System.out.println(c.d);
+
+    }
+
+ }
