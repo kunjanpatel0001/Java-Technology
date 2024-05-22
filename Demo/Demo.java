@@ -1,26 +1,6 @@
-class C1 {
-
-    int a;
-
-    int b;
-
- }
 
 
- class C2 {
-
-    int a;
-
-    int b;
-
-    int c;
-
-    int d;
-
- }
-
-
- class Reusablity {
+ class Demo {
 
     public static void main(String[] args) {
 
@@ -34,9 +14,9 @@ class C1 {
 
         C2 obj2 = new C2();
 
-        obj2.a = 10;
+        obj2.obj.a = 10;
 
-        obj2.b = 20;
+        obj2.obj.b = 20;
 
         obj2.c = 30;
 
@@ -46,6 +26,7 @@ class C1 {
 
     }
 
+
     static void printc1(C1 c) {
 
         System.out.println(c.a);
@@ -54,16 +35,36 @@ class C1 {
 
     }
 
+
     static void printc2(C2 c) {
 
-        System.out.println(c.a);
+        System.out.println(c.obj.a);
 
-        System.out.println(c.b);
+        System.out.println(c.obj.b);
 
         System.out.println(c.c);
 
         System.out.println(c.d);
 
     }
+
+ }
+
+ class C1 {
+
+    int a;
+
+    int b;
+
+ }
+
+
+ class C2 {
+
+    C1 obj = new C1();
+
+    int c;
+
+    int d;
 
  }
