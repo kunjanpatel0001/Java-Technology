@@ -1,5 +1,6 @@
 
 
+
  class Demo {
 
     public static void main(String[] args) {
@@ -14,9 +15,9 @@
 
         C2 obj2 = new C2();
 
-        obj2.obj.a = 10;
+        obj2.a = 10;
 
-        obj2.obj.b = 20;
+        obj2.b = 20;
 
         obj2.c = 30;
 
@@ -26,7 +27,6 @@
 
     }
 
-
     static void printc1(C1 c) {
 
         System.out.println(c.a);
@@ -35,12 +35,11 @@
 
     }
 
-
     static void printc2(C2 c) {
 
-        System.out.println(c.obj.a);
+        System.out.println(c.a);
 
-        System.out.println(c.obj.b);
+        System.out.println(c.b);
 
         System.out.println(c.c);
 
@@ -59,9 +58,7 @@
  }
 
 
- class C2 {
-
-    C1 obj = new C1();
+ class C2 extends C1 {
 
     int c;
 
