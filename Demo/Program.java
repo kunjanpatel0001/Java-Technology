@@ -1,57 +1,29 @@
-import java.io.*;
-import java.util.ArrayList;
-
 public class Program {
-   public static void main(String[] args) throws Exception {
+    public static void main(String[] args){
+        GreenPiggy client1 = new GreenPiggy();
+        client1.deposit(200);
+        client1.deposit(40);
+        client1.withdraw(33);
+        client1.statement();
 
-       System.out.println("Welcome to JavaIO");
+    }
+}
+class GreenPiggy{
+    int balance;
+    int lt;
+    public void deposit(int v){
+        balance = balance + v;
+        lt = v;
+    }
 
-       BufferedReader kin = new BufferedReader(
-               new InputStreamReader(System.in)
-       );
+    public void withdraw(int v){
+        balance = balance - v;
+        lt = -v;
+    }
 
-       System.out.println("Type \"End\" to stop entering data?");
-
-       ArrayList<String> al = new ArrayList<String>();
-       System.out.print("Enter String --> ");
-       String str = kin.readLine();
-       while (!str.equals("End")) {
-           al.add(str);
-           System.out.print("Enter String --> ");
-           str = kin.readLine();
-       }
-       System.out.println("out");
-       BufferedReader fis =
-             new BufferedReader(
-                new FileReader("input.txt")
-             );
-      
-       str = fis.readLine();
-       while (str != null) {
-           al.add(str);
-           str = fis.readLine();
-       }
-       PrintWriter pw
-           = new PrintWriter(
-                  new BufferedWriter(
-                          new FileWriter("output.txt", true)
-                  ), true
-             );
-       System.out.println("Printing Strings:");
-
-       for (String s : al) {
-           System.out.println(s);
-           pw.println(s);
-       }
-
-       String max = al.get(0);
-       for (int k = 1; k < al.size(); k++) {
-           if (max.compareTo(al.get(k)) < 0) {
-               max = al.get(k);
-           }
-       }
-
-       System.out.println("The Highest String is " + max);
-       pw.println("The Highest String is " + max);
-   }
+    public void statement(){
+        System.out.println("Printing Statement");
+        System.out.println("Balance = " + balance);
+        System.out.println("Last Trasaction = " + lt);
+    }
 }
