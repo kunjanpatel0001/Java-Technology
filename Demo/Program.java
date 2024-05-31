@@ -12,6 +12,10 @@ static void Client(Piggy pg) {
     pg.deposit(40);
     pg.withdraw(33);
     pg.statement();
+    pg.transaction('d', 44);
+    pg.transaction('w', 22);
+    pg.statement();
+
 }  
 }
 
@@ -19,6 +23,7 @@ interface Piggy {
 void deposit(int v);
 void withdraw(int v);
 void statement();
+void transaction(char op, int v);
 }
 
 class GreenPiggy implements Piggy {
@@ -45,30 +50,58 @@ public void statement() {
     System.out.println("Balance = " + balance);
     System.out.println("Last Transaction = " + lt);
 }
+
+@Override
+public void transaction(char op, int v){
+    switch(op){
+        case 'd':
+            deposit(v);
+            break;
+        case 'w':
+            withdraw(v);
+            break;
+        default:
+            System.err.println("Incorrect Operation in Transaction");
+    }
+    }
 }
 
 class RedPiggy implements Piggy {
-int currentbalance;
-int previousbalance;
+    int currentbalance;
+    int previousbalance;
 
-@Override
-public void deposit(int v) {
-    previousbalance = currentbalance;
-    currentbalance = currentbalance + v;
-}
-
-@Override
-public void withdraw(int v) {
-    if (currentbalance >= v) {
+    @Override
+    public void deposit(int v) {
         previousbalance = currentbalance;
-        currentbalance = currentbalance - v;
+        currentbalance = currentbalance + v;
     }
-}
-@Override
-   public void statement() {
-       System.out.println("Printing Statement");
-       System.out.println("Balance = " + currentbalance);
-       System.out.println("Last Transaction = " + (currentbalance - previousbalance));
-   }
+
+    @Override
+    public void withdraw(int v) {
+        if (currentbalance >= v) {
+            previousbalance = currentbalance;
+            currentbalance = currentbalance - v;
+        }
+    }
+    @Override
+    public void statement() {
+        System.out.println("Printing Statement");
+        System.out.println("Balance = " + currentbalance);
+        System.out.println("Last Transaction = " + (currentbalance - previousbalance));
+    }
+
+    @Override
+    public void transaction(char op, int v){
+        switch(op){
+                case 'd':
+                    deposit(v);
+                    break;
+                case 'w':
+                    withdraw(v);
+                    break;
+                default:
+                    System.err.println("Incorrect Operation in Transaction");
+        }
+    }
 }
 
