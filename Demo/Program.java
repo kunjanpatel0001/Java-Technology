@@ -2,9 +2,15 @@ public class Program {
 
 
     public static void main(String[] args) {
-        System.out.println("Catching the exception in m1()");
+        System.out.println("Catching the exception in main");
         System.out.println("Entering Main ");
-        C1.m1();
+        try {
+            System.out.println("Entering try");
+            C1.m1();
+            System.out.println("Leaving try");
+         } catch (ArithmeticException e) {
+             System.out.println("Caught Arithmetic Exception");
+             }
         System.out.println("Leaving main");
     }
  }
@@ -12,13 +18,7 @@ public class Program {
  class C1 {
     public static void m1() {
         System.out.println("Entering  m1 ");
-        try {
-            System.out.println("Entering try");
-            C2.m2();
-            System.out.println("Leaving try");
-         } catch (ArithmeticException e) {
-             System.out.println("Caught Arithmetic Exception");
-             }
+        C2.m2();
         System.out.println("Leaving  m1 ");
     }
  }
