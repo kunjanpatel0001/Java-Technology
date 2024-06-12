@@ -2,7 +2,7 @@ public class Program {
 
 
     public static void main(String[] args) {
-        System.out.println("Null pointer Exception Handling");
+        System.out.println("Try Catch");
         System.out.println("Entering Main ");
         C1.m1();
         System.out.println("Leaving main");
@@ -20,10 +20,16 @@ public class Program {
  class C2 {
     public static void m2() {
         System.out.println("Entering  m2 ");
-        String str = null;
-        str.equals("End");
+        int a = 1;
+        int b = 2;
+        int c = 1;
+       try {
+           System.out.println("Entering try");
+           a = b / c;
+           System.out.println("Leaving try");
+        } catch (ArithmeticException e) {
+            System.out.println("Caught Arithmetic Exception");
+            }
         System.out.println("Leaving  m2 ");
- 
+        }
     }
- 
- }
