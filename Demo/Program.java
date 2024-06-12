@@ -2,15 +2,9 @@ public class Program {
 
 
     public static void main(String[] args) {
-        System.out.println("Catching the exception in main");
+        System.out.println("Multiple catch");
         System.out.println("Entering Main ");
-        try {
-            System.out.println("Entering try");
-            C1.m1();
-            System.out.println("Leaving try");
-         } catch (ArithmeticException e) {
-             System.out.println("Caught Arithmetic Exception");
-             }
+        C1.m1();
         System.out.println("Leaving main");
     }
  }
@@ -24,12 +18,28 @@ public class Program {
  }
  
  class C2 {
+    static boolean flag1 ;
+    static boolean flag2 ;
     public static void m2() {
         System.out.println("Entering  m2 ");
-        int a = 1;
-        int b = 2;
-        int c = 0;
-        a = b / c;
-        System.out.println("Leaving  m2 ");
-        }
- }
+        try {
+            System.out.println("Entering try");
+            if (flag1) {
+               int a = 1, b = 2, c = 0;
+               a = b / c;
+            }
+            System.out.println("Median");
+
+            if (flag2) {
+               int[] b = new int[10];
+               b[19] = 22;
+           }
+           System.out.println("Leaving try");
+       } catch (ArithmeticException e) {
+           System.out.println("Arithmetic Exception caught");
+       } catch (ArrayIndexOutOfBoundsException a) {
+           System.out.println("ArrayIndexOutOfBoundsException caught");
+       }
+       System.out.println("Leaving  m2 ");
+   }
+}
