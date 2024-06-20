@@ -4,28 +4,30 @@ import java.io.*;
 
 public class Program {
     public static void main(String[] args) throws Exception{
-        System.out.println("JavaIO : Highest Number in Array");
-
-        final int SIZE = 5;         // final variables are in capitals
+        System.out.println("JavaIO : String Array");
         BufferedReader kin = new BufferedReader(
             new InputStreamReader(System.in)
         );
+        System.out.println("How many strings do you want to enter? ");
+        int n = Integer.parseInt(kin.readLine());
+        String[] a = new String[n];
 
-        int[] arr = new int[SIZE];      //declaring an array
-        for (int i = 0; i < SIZE; i++) {
-            System.err.println("arr[" + i + "] = ");
-            arr[i] = Integer.parseInt(kin.readLine());
+        for (int i = 0; i < a.length; i++) {
+            System.out.println("a[" + i + "]=");
+            a[i] = kin.readLine();
         }
-        System.out.println("Printing Numbers: ");
+        System.out.println("Printing Strings:");
+        for (int j = 0; j < a.length; j++) {
+            System.out.println("a[" + j + "]=" + a[j]);
+        }
+        String max = a[0];
+        for (int k = 1; k < a.length; k++) {
+            if ( max.compareTo(a[k]) < 0 ) {
+                max = a[k];
+            }
+        }
+ 
+        System.out.println("The Highest String is " + max);
 
-        for(int j = 0; j < SIZE; j++){
-            System.out.println("arr["+j+"]="+arr[j]);
-        }
-        int max = arr[0];
-        for(int k = 1; k < SIZE; k++){
-            if (max < arr[k]) max = arr[k];
-        }
-
-        System.out.println("The highest number is: " + max);
     }
 }
