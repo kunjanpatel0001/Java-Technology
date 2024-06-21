@@ -1,39 +1,24 @@
-import java.io.*;
 import java.util.ArrayList;
 
-public class Program {
-    public static void main(String[] args) throws Exception {
- 
-        System.out.println("ArrayList");
- 
-        BufferedReader kin = new BufferedReader(
-                new InputStreamReader(System.in)
-        );
- 
-        System.out.println("Type \"End\" to stop entering data?");
-
-        ArrayList<String> al = new ArrayList<String>();
-       System.out.print("Enter String --> ");
-       String str = kin.readLine();
-       while(!str.equals("End")) {
-           al.add(str);
-           System.out.print("Enter String --> ");
-           str = kin.readLine();
-       }
-
-       System.out.println("Printing Strings:");
-
-       for (String s : al) {
-           System.out.println(s);
-       }
-
-       String max = al.get(0);
-       for (int k = 1; k < al.size() ; k++) {
-           if ( max.compareTo(al.get(k)) < 0 ) {
-               max = al.get(k);
-           }
-       }
-
-       System.out.println("The Highest String is " + max);
-   }
+public class Program 
+{
+   public static void main(String[] args) 
+   {
+       System.out.println("ArrayList");
+       System.out.println("Let Create an ArrayList");
+       ArrayList<Object> a = new ArrayList<Object>();
+       System.out.println("Initial Capacity of array list is 10");
+       a.add(10);
+       a.add(20);
+       a.add(30);
+       a.add(40);
+       a.add(50);
+       a.add(60);
+       a.add(70);
+       a.add(80);
+       a.add(90);
+       a.add(100);
+       System.out.println("Let us print the array list now");
+       System.out.println(a);
+   }    
 }
