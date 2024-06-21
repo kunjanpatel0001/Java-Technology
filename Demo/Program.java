@@ -1,27 +1,46 @@
 import java.util.ArrayList;
 
-public class Program 
-{
- public static void main(String[] args) 
-   {
-       System.out.println("ArrayList - using an existing arrayList to create a new one");
-       ArrayList<Object> a = new ArrayList<>(5);
-       a.add(10);
-       a.add(20);
-       a.add(30);
-       a.add(40);
-       a.add(50);
-       System.out.println("a = " + a);
-       System.out.println("We can create an ArrayList from an existing arraylist *a* using this constructor");
-       ArrayList<Object> b = new ArrayList<>(a);
-       System.out.println("It copies the data of arraylist *a*");
-       System.out.println("b = " + b);      
-       System.out.println("We can also add more elements");
-       b.add(100);
-       b.add(200);
-       b.add(300);
-       b.add(400);
-       b.add(500);
-       System.out.println("b = "+ b);
-   }   
+import java.util.Collections;
+
+
+public class Program {
+
+
+   public static void main(String[] args) {
+
+        System.out.println("ArrayList - adding, indexOf, get")
+
+       System.out.println("Array List is one of the collections api .. provided by java");
+
+       ArrayList<Object> al = new ArrayList<>();
+
+       
+
+       System.out.println("adding element to array list");
+
+       al.add("This a String");
+
+       al.add(10);
+
+       al.add(23.6);
+
+       al.add('d');
+
+               
+
+       System.out.println("\nprinting the arrayList .. ");
+
+       System.out.println(al);
+
+       System.out.println("\nobtaining the contents from the arraylist at a particular index..");
+
+       String s = (String) al.get(0); //typecasting the content obtained from the array list.
+
+       System.out.println("s=" + s);
+
+       int indexno = al.indexOf(23.6);
+
+       System.out.println("\nthe number 23.6 is located at index no " + indexno);
+   }
 }
+
