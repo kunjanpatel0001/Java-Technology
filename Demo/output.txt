@@ -4,3 +4,6 @@ The Highest String is ko
 ko
 ki
 The Highest String is ko
+Keyboard Input
+Input File for File I/O Programming Demo.
+The Highest String is Keyboard Input
