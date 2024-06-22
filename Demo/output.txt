@@ -1,3 +1,6 @@
 ko
 ki
 The Highest String is ko
+ko
+ki
+The Highest String is ko

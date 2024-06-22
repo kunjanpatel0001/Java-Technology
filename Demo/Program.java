@@ -5,7 +5,7 @@ public class Program{
 
    public static void main(String[] args) throws Exception {
 
-       System.out.println("JavaIO - File Writing");
+       System.out.println("JavaIO - Appending File ");
 
        BufferedReader kin = new BufferedReader(
                new InputStreamReader(System.in)
@@ -22,9 +22,12 @@ public class Program{
            str = kin.readLine();
        }
 
-       FileWriter fw = new FileWriter("output.txt");
-       BufferedWriter bw = new BufferedWriter(fw);
-       PrintWriter pw = new PrintWriter(bw, true);
+       PrintWriter pw
+           = new PrintWriter(
+                  new BufferedWriter(
+                      new FileWriter("output.txt", true)        // true : append to existing Output.txt
+                  ), true
+             );
 
        System.out.println("Printing Strings:");
 
