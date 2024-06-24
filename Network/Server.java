@@ -8,8 +8,8 @@ public class Server {
 
    public static void main(String[] args) throws IOException {
        System.out.println("Server Signing ON");
-       ServerSocket ss = new ServerSocket(9081);        // object is created with port number
-       Socket soc = ss.accept();        // Blocking call - until there is a request from client side and after successful connection, it returns us the socket object in "soc"
+       ServerSocket ss = new ServerSocket(9081);
+       Socket soc = ss.accept();
        BufferedReader nis = new BufferedReader(
                                new InputStreamReader(
                                        soc.getInputStream()
