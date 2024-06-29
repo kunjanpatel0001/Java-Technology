@@ -1,57 +1,60 @@
-// using both the ways of creating Thread : Implements Runnable, Extends Thread class
+// Lambda function
 
 public class Program {
     public static void main(String[] args) {
         System.out.println("Welcome to threading");
-        Work1 w1 = new Work1();
-        Thread t1 = new Thread(w1);
+        
+        // Passing it as a parameter
+
+        (new Thread(
+                () -> {
+                    Thread t = Thread.currentThread();
+                    for (int i = 0; i < 5; i++) {
+                        System.out.println(
+                                t.getName() +
+                                " says " + " hello "
+                                + i
+                        );
+                        try {
+                            Thread.sleep(1000);
+                        } catch (Exception e) {
+                        }
+                    }
+        })).start();
        
-        Work2 t2 = new Work2();
-        t1.start();
-        t2.start();
-        t1.setName("t1");
-        t2.setName("t2");
+        // As an anonymous class extending Thread
+  
+        (new Thread() {
+            @Override
+            public void run() {
+                Thread t = Thread.currentThread();
+                for (int i = 0; i < 5; i++) {
+                    System.out.println(
+                            t.getName() +
+                            " says " + " hello "
+                            + i
+                    );
+                    try {
+                        Thread.sleep(1000);
+                    } catch (Exception e) {
+                    }
+  
+                }
+            }
+        }).start();
+       
         Thread t = Thread.currentThread();
         for (int i = 0; i < 5; i++) {
-            System.out.println(t.getName() + " says hello " + i);
+            System.out.println(
+                    t.getName() +
+                    " says hello "
+                    + i
+            );
             try {
                 Thread.sleep(1000);
             } catch (Exception ex) {
   
             }
-        }
-  
-    }
-  }
-  
-  class Work1 implements Runnable {
-  
-    @Override
-    public void run() {
-        Thread t = Thread.currentThread();
-        for (int i = 0; i < 5; i++) {
-            System.out.println(t.getName() + " says " + " hello " + i);
-            try {
-                Thread.sleep(1000);
-            } catch (Exception e) {
-            }
-        }
-  
-    }
-  }
-  
-  class Work2 extends Thread {
-  
-    @Override
-    public void run() {
-        Thread t = Thread.currentThread();
-        for (int i = 0; i < 5; i++) {
-            System.out.println(t.getName() + " says " + " hello " + i);
-            try {
-                Thread.sleep(1000);
-            } catch (Exception e) {
-            }
-  
         }
     }
   }
