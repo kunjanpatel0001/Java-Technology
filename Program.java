@@ -1,14 +1,12 @@
-// Multi-threading - Work - Start - Thread - Run
-// Runnable
+// using both the ways of creating Thread : Implements Runnable, Extends Thread class
 
 public class Program {
     public static void main(String[] args) {
         System.out.println("Welcome to threading");
         Work1 w1 = new Work1();
-        Work2 w2 = new Work2();
-  
         Thread t1 = new Thread(w1);
-        Thread t2 = new Thread(w2);
+       
+        Work2 t2 = new Work2();
         t1.start();
         t2.start();
         t1.setName("t1");
@@ -42,7 +40,7 @@ public class Program {
     }
   }
   
-  class Work2 implements Runnable {
+  class Work2 extends Thread {
   
     @Override
     public void run() {
