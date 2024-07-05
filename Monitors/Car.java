@@ -1,3 +1,4 @@
+// Static Variables
 class Car extends Thread
 {
    @Override

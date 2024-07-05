@@ -1,3 +1,4 @@
+//static Variables
 class Bike extends Thread
 {
    @Override

@@ -1,10 +1,11 @@
 class RacingCircuit
 {
+    static int lap = 0;                 // initially this variable was local and hence there was no interferance
   public void busyTracks()
   {
      Thread t = Thread.currentThread();
      System.out.println(t.getName() + " Enters busyTracks");
-     int lap = 0;
+
      for(lap=0;lap<5;lap++)
      {
          String str = String.format(
