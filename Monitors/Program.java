@@ -1,5 +1,3 @@
-// static Variables
-
 public class Program {
     public static void main(String[] args) {
         System.out.println("Start Race");
@@ -16,7 +14,5 @@ public class Program {
             System.out.println("Join interrupted "+ ex);
         }
         System.out.println("End Race");
-    
     }
-
-}
+ }
