@@ -1,5 +1,3 @@
-// has 2 threads: main & Event dispatch thread
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -40,6 +38,7 @@ public class Client {
         b1.addActionListener(l1);
         tf.addActionListener(l1);
         String str = nis.readLine();
+
         while (!str.equals("End")) {
             ta.append(str + "\n");
             str = nis.readLine();
@@ -49,7 +48,9 @@ public class Client {
     }
 }
 
+
 class L1 implements ActionListener {
+
     JTextField tf;
     JTextArea ta;
     PrintWriter nos;
@@ -66,4 +67,5 @@ class L1 implements ActionListener {
         tf.setText("");
         nos.println(str);
     }
+
 }
