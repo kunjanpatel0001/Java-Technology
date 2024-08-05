@@ -1,0 +1,21 @@
+public class Explore{
+
+   public static void main(String[] args)
+
+   {
+
+       System.out.println("Welcome to LearingReflection");  
+
+       String str = "Hello World";
+
+       System.out.println("Obtaining Meta Object of str");
+
+       Class c = str.getClass();
+
+       System.out.println("str belongs to type " + c.getName());
+
+      
+
+   }
+
+}
