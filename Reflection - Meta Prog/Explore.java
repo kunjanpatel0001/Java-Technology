@@ -21,7 +21,7 @@ public class Explore {
 
    System.out.println(s.getName());
 
-   Method[] m1 = c.getMethods();
+   Method[] m1 = c.getDeclaredMethods();        // getDeclaredMethods gives public & private methods
 
    System.out.println("The Methods are :");
 
