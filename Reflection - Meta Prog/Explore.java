@@ -1,50 +1,59 @@
-// uses Java reflection to inspect and interact with C1's constructors and fields at runtime.
-
-import java.lang.reflect.Field;     // for accessing fields of the class.
-import java.lang.reflect.Constructor;       // for accessing constructors.
-import java.lang.reflect.Method;        //for accessing methods.
-
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
 
 public class Explore {
-   public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
+        // Load the C1 class
+        Class<?> t = Class.forName("C1");
 
-       Class t = Class.forName("rtti.C1");      // Loading C1 class
+        // Get the default constructor and make it accessible
+        Constructor<?> defaultConstructor = t.getDeclaredConstructor();
+        defaultConstructor.setAccessible(true);
 
-       Object o = t.newInstance();      // creating new instance of C1 using default constructor
-    
-       // Print different representation of class name
-       System.out.println("Name of Class "+t.getName());
-       System.out.println("Canonical Name of Class "+t.getCanonicalName());
-       System.out.println("Simple Name of Class "+t.getSimpleName());
-       System.out.println("Type Name of Class "+t.getTypeName());
+        // Create a new instance of C1 using the default constructor
+        Object o = defaultConstructor.newInstance();
 
-       Constructor c[] = t.getDeclaredConstructors();       // getting public and private constructors of the class
+        // Print class names
+        System.out.println("Name of Class: " + t.getName());
+        System.out.println("Canonical Name of Class: " + t.getCanonicalName());
+        System.out.println("Simple Name of Class: " + t.getSimpleName());
+        System.out.println("Type Name of Class: " + t.getTypeName());
 
-       for (Constructor cc : c) {
-            // for each constructor
-           System.out.println(cc.getName());
-           System.out.println(cc.getModifiers());
-           System.out.println(cc.getParameterCount());
+        // Get all declared constructors
+        Constructor<?>[] constructors = t.getDeclaredConstructors();
 
-           // If the constructor has two parameters, create a new instance using this constructor and print the values of fields a and b
-           if (cc.getParameterCount() == 2) {
-               o = cc.newInstance(3, 2);
-               int i = o.getClass().getField("a").getInt(o);
-               int j = o.getClass().getField("b").getInt(o);
-               System.out.println("a=" + i);
-               System.out.println("b=" + j);
-           }
+        for (Constructor<?> cc : constructors) {
+            System.out.println("Constructor Name: " + cc.getName());
+            System.out.println("Modifiers: " + cc.getModifiers());
+            System.out.println("Parameter Count: " + cc.getParameterCount());
 
-           // if the constructor has >2 parameters, use the default instance & print
-           else{
-            int i = o.getClass().getField("a").getInt(o);
-            int j = o.getClass().getField("b").getInt(o);
-            System.out.println("a=" + i);
-            System.out.println("b=" + j);
-           }
+            if (cc.getParameterCount() == 2) {
+                // Create a new instance using the parameterized constructor
+                cc.setAccessible(true);
+                o = cc.newInstance(3, 2);
 
-       }
+                // Access fields 'a' and 'b'
+                Field fieldA = o.getClass().getDeclaredField("a");
+                Field fieldB = o.getClass().getDeclaredField("b");
+                fieldA.setAccessible(true);
+                fieldB.setAccessible(true);
+                int i = fieldA.getInt(o);
+                int j = fieldB.getInt(o);
+                System.out.println("a = " + i);
+                System.out.println("b = " + j);
+            } else {
+                // Use the default instance created earlier
 
-   }
-
+                // Access fields 'a' and 'b'
+                Field fieldA = o.getClass().getDeclaredField("a");
+                Field fieldB = o.getClass().getDeclaredField("b");
+                fieldA.setAccessible(true);
+                fieldB.setAccessible(true);
+                int i = fieldA.getInt(o);
+                int j = fieldB.getInt(o);
+                System.out.println("a = " + i);
+                System.out.println("b = " + j);
+            }
+        }
+    }
 }
