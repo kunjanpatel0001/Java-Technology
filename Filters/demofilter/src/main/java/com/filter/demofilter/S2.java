@@ -7,6 +7,8 @@ import javax.servlet.ServletException;
 
 import javax.servlet.ServletOutputStream;
 
+import javax.servlet.annotation.WebServlet;
+
 import javax.servlet.http.HttpServlet;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,7 +25,6 @@ import javax.servlet.http.HttpServletResponse;
     )
 
 })
-
 
 public class S2 extends HttpServlet {
 
@@ -63,7 +64,17 @@ public class S2 extends HttpServlet {
 
             String msg = sconfig.getInitParameter("message");
 
+            request.setAttribute("msg",msg);
+
             out.println("<h1>Servlet S2 says " + msg + "</h1>");
+
+            out.println(
+
+                    "<h1> Servlet S2 get one more message "+ 
+
+                    request.getAttribute("fmsg")+"</h1>"
+
+            );
 
             out.println("</body>");
 
