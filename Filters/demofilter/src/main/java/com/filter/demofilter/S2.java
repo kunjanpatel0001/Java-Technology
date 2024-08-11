@@ -1,13 +1,13 @@
 package main.java.com.filter.demofilter;
 import java.io.IOException;
 
+import java.io.PrintWriter;
+
 import javax.servlet.ServletConfig;
 
 import javax.servlet.ServletException;
 
 import javax.servlet.ServletOutputStream;
-
-import javax.servlet.annotation.WebServlet;
 
 import javax.servlet.http.HttpServlet;
 
@@ -15,16 +15,6 @@ import javax.servlet.http.HttpServletRequest;
 
 import javax.servlet.http.HttpServletResponse;
 
-
-@WebServlet(name = "S2", urlPatterns = {"/S2"}, initParams = {
-
-    @WebInitParam(name = "message", 
-
-                  value = "Annotations can be used for configuration parameters"
-
-    )
-
-})
 
 public class S2 extends HttpServlet {
 
@@ -44,7 +34,7 @@ public class S2 extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
 
-        ServletOutputStream out = response.getOutputStream();
+        PrintWriter out = response.getWriter();
 
         try{
 

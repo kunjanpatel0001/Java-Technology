@@ -1,9 +1,11 @@
 package main.java.com.filter.demofilter;
 import java.io.IOException;
 
-import javax.servlet.ServletException;
+import java.io.PrintWriter;
 
-import javax.servlet.ServletOutputStream;
+import javax.servlet.RequestDispatcher;
+
+import javax.servlet.ServletException;
 
 import javax.servlet.annotation.WebServlet;
 
@@ -32,7 +34,7 @@ public class S1 extends HttpServlet {
 
         response.setContentType("text/html;charset=UTF-8");
 
-        ServletOutputStream out = response.getOutputStream();
+        PrintWriter out = response.getWriter();
 
         try {
 
@@ -49,6 +51,10 @@ public class S1 extends HttpServlet {
             out.println("<body>");
 
             out.println("<h1> Welcome to the World Of Servlet</h1>");
+
+            RequestDispatcher rd = request.getRequestDispatcher("S2");
+
+            rd.forward(request, response);
 
             out.println("</body>");
 
