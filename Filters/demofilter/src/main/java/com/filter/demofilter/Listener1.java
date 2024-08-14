@@ -1,9 +1,9 @@
-package main.java.com.filter.demofilter;
+//Annotations are to be added
 import javax.servlet.ServletRequestEvent;
 
 import javax.servlet.ServletRequestListener;
 
-@WenListener
+
 public class Listener1 implements ServletRequestListener {
 
     static int count = 0;
@@ -26,4 +26,4 @@ public class Listener1 implements ServletRequestListener {
 
     }
 
-} 
+}
