@@ -18,8 +18,10 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    compileOnly 'javax.servlet:javax.servlet-api:4.0.1'  // Use compileOnly instead of providedCompile
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'jakarta.servlet:jakarta.servlet-api:5.0.0'
+    // compileOnly 'javax.servlet:javax.servlet-api:4.0.1'  // Use compileOnly instead of providedCompile
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

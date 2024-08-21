@@ -1,44 +1,25 @@
-package main.java.com.example;
+package com.example.loginframework.servlets;
+
 import java.io.IOException;
-
 import java.io.PrintWriter;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
-import javax.servlet.ServletException;
-
-import javax.servlet.annotation.WebServlet;
-
-import javax.servlet.http.HttpServlet;
-
-import javax.servlet.http.HttpServletRequest;
-
-import javax.servlet.http.HttpServletResponse;
-
-
-@WebServlet(name = "SimpleLogin", urlPatterns = {"/SimpleLogin"})
-
+@WebServlet(name = "SimpleLogin", urlPatterns = {"/SimpleLogin"}, loadOnStartup = 1)
 public class SimpleLogin extends HttpServlet {
 
-
    @Override
-
-   public void service(
-
+   public void doGet(
            HttpServletRequest request,
-
-           HttpServletResponse response)
-
-           throws ServletException, IOException
-
-   {
+           HttpServletResponse response) throws ServletException, IOException {
 
        response.setContentType("text/html;charset=UTF-8");
-
        try (PrintWriter out = response.getWriter()) {
-
            out.println("<!DOCTYPE html>");
-
            out.println("<html>");
-
            out.println("<head>");
 
            out.println("<title>Servlet Login</title>");
@@ -80,7 +61,5 @@ public class SimpleLogin extends HttpServlet {
            out.println("</html>");
 
        }
-
    }
-
 }
