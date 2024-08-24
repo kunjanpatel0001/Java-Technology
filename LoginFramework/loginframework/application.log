@@ -1,25 +1,33 @@
-2024-08-22T12:06:02.407+05:30  INFO 76844 --- [loginframework] [Test worker] c.e.l.LoginframeworkApplicationTests     : Starting LoginframeworkApplicationTests using Java 21.0.3 with PID 76844 (started by kunjanpatel in /Users/kunjanpatel/Desktop/Java Technology/Java-Technology/LoginFramework/loginframework)
-2024-08-22T12:06:02.413+05:30  INFO 76844 --- [loginframework] [Test worker] c.e.l.LoginframeworkApplicationTests     : No active profile set, falling back to 1 default profile: "default"
-2024-08-22T12:06:02.433+05:30 DEBUG 76844 --- [loginframework] [Test worker] o.s.w.c.s.GenericWebApplicationContext   : Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5cdf39b2
-2024-08-22T12:06:03.056+05:30 DEBUG 76844 --- [loginframework] [Test worker] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
-2024-08-22T12:06:03.099+05:30 DEBUG 76844 --- [loginframework] [Test worker] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-08-22T12:06:03.116+05:30 DEBUG 76844 --- [loginframework] [Test worker] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-08-22T12:06:03.136+05:30 DEBUG 76844 --- [loginframework] [Test worker] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-08-22T12:06:03.259+05:30  INFO 76844 --- [loginframework] [Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2024-08-22T12:06:03.306+05:30  INFO 76844 --- [loginframework] [Test worker] c.e.l.LoginframeworkApplicationTests     : Started LoginframeworkApplicationTests in 1.052 seconds (process running for 1.795)
-2024-08-22T12:06:03.960+05:30 DEBUG 76844 --- [loginframework] [SpringApplicationShutdownHook] o.s.w.c.s.GenericWebApplicationContext   : Closing org.springframework.web.context.support.GenericWebApplicationContext@5cdf39b2, started on Thu Aug 22 12:06:02 IST 2024
-2024-08-22T12:06:14.580+05:30  INFO 76881 --- [loginframework] [main] c.e.l.LoginframeworkApplication          : Starting LoginframeworkApplication using Java 21.0.3 with PID 76881 (/Users/kunjanpatel/Desktop/Java Technology/Java-Technology/LoginFramework/loginframework/build/classes/java/main started by kunjanpatel in /Users/kunjanpatel/Desktop/Java Technology/Java-Technology/LoginFramework/loginframework)
-2024-08-22T12:06:14.582+05:30  INFO 76881 --- [loginframework] [main] c.e.l.LoginframeworkApplication          : No active profile set, falling back to 1 default profile: "default"
-2024-08-22T12:06:15.122+05:30  INFO 76881 --- [loginframework] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-22T12:06:15.130+05:30  INFO 76881 --- [loginframework] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-22T12:06:15.130+05:30  INFO 76881 --- [loginframework] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
-2024-08-22T12:06:15.160+05:30  INFO 76881 --- [loginframework] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-22T12:06:15.160+05:30  INFO 76881 --- [loginframework] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 556 ms
-2024-08-22T12:06:15.235+05:30 DEBUG 76881 --- [loginframework] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
-2024-08-22T12:06:15.295+05:30 DEBUG 76881 --- [loginframework] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
-2024-08-22T12:06:15.322+05:30 DEBUG 76881 --- [loginframework] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-08-22T12:06:15.334+05:30 DEBUG 76881 --- [loginframework] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-08-22T12:06:15.349+05:30 DEBUG 76881 --- [loginframework] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-08-22T12:06:15.418+05:30  INFO 76881 --- [loginframework] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
-2024-08-22T12:06:15.453+05:30  INFO 76881 --- [loginframework] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-22T12:06:15.463+05:30  INFO 76881 --- [loginframework] [main] c.e.l.LoginframeworkApplication          : Started LoginframeworkApplication in 1.136 seconds (process running for 1.353)
+2024-08-24T17:34:35.427+05:30  INFO 92715 --- [loginframework] [main] c.e.l.LoginframeworkApplication          : Starting LoginframeworkApplication using Java 21.0.3 with PID 92715 (/Users/kunjanpatel/Desktop/Java Technology/Java-Technology/LoginFramework/loginframework/build/classes/java/main started by kunjanpatel in /Users/kunjanpatel/Desktop/Java Technology/Java-Technology/LoginFramework/loginframework)
+2024-08-24T17:34:35.448+05:30  INFO 92715 --- [loginframework] [main] c.e.l.LoginframeworkApplication          : No active profile set, falling back to 1 default profile: "default"
+2024-08-24T17:34:36.995+05:30  INFO 92715 --- [loginframework] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-24T17:34:37.015+05:30  INFO 92715 --- [loginframework] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-24T17:34:37.015+05:30  INFO 92715 --- [loginframework] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-24T17:34:37.094+05:30  INFO 92715 --- [loginframework] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-24T17:34:37.095+05:30  INFO 92715 --- [loginframework] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1588 ms
+2024-08-24T17:34:37.300+05:30 DEBUG 92715 --- [loginframework] [main] o.s.w.f.ServerHttpObservationFilter      : Filter 'webMvcObservationFilter' configured for use
+2024-08-24T17:34:37.471+05:30 DEBUG 92715 --- [loginframework] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 mappings in 'requestMappingHandlerMapping'
+2024-08-24T17:34:37.546+05:30 DEBUG 92715 --- [loginframework] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-08-24T17:34:37.583+05:30 DEBUG 92715 --- [loginframework] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-08-24T17:34:37.631+05:30 DEBUG 92715 --- [loginframework] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-08-24T17:34:37.831+05:30  INFO 92715 --- [loginframework] [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoints beneath base path '/actuator'
+2024-08-24T17:34:37.916+05:30  INFO 92715 --- [loginframework] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-24T17:34:37.934+05:30  INFO 92715 --- [loginframework] [main] c.e.l.LoginframeworkApplication          : Started LoginframeworkApplication in 3.168 seconds (process running for 3.644)
+2024-08-24T17:34:41.790+05:30  INFO 92715 --- [loginframework] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-24T17:34:41.791+05:30  INFO 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-24T17:34:41.793+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected StandardServletMultipartResolver
+2024-08-24T17:34:41.793+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected AcceptHeaderLocaleResolver
+2024-08-24T17:34:41.793+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected FixedThemeResolver
+2024-08-24T17:34:41.798+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5bbaa3af
+2024-08-24T17:34:41.798+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.support.SessionFlashMapManager@1db047b
+2024-08-24T17:34:41.799+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-08-24T17:34:41.799+05:30  INFO 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2024-08-24T17:34:41.833+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : GET "/SimpleLogin?username=tom&password=cat", parameters={masked}
+2024-08-24T17:34:41.851+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-08-24T17:34:41.858+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.w.s.r.ResourceHttpRequestHandler     : Resource not found
+2024-08-24T17:34:41.874+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource SimpleLogin.]
+2024-08-24T17:34:41.874+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND
+2024-08-24T17:34:41.891+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error?username=tom&password=cat", parameters={masked}
+2024-08-24T17:34:41.896+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+2024-08-24T17:34:41.935+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver : Selected 'text/html' given [text/html, text/html;q=0.8]
+2024-08-24T17:34:41.959+05:30 DEBUG 92715 --- [loginframework] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404
