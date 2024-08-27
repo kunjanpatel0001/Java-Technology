@@ -15,14 +15,14 @@ import jakarta.servlet.http.HttpSession;
 public class Logout extends HttpServlet {
 
     @Override
-    public void service(HttpServletRequest request, HttpServletResponse response)
-    throws ServletException, IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response)
+        throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
         HttpSession session = request.getSession(false);
         if(session != null) {
-            session.invalidate();
+            session.invalidate();    
         }
-
         request.getRequestDispatcher("Login").forward(request, response);
     }
 }

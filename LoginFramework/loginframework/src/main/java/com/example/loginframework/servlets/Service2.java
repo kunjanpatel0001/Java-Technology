@@ -1,4 +1,5 @@
 package com.example.loginframework.servlets;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
@@ -8,12 +9,14 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebServlet(name = "Welcome", urlPatterns = {"/Welcome"})
 
-public class Welcome extends HttpServlet {
+
+@WebServlet(name = "Service2", urlPatterns = {"/Service2"})
+public class Service2 extends HttpServlet {
+
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response)
-        throws ServletException, IOException {
+    public void doGet(HttpServletRequest request,HttpServletResponse response)
+    throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         HttpSession session = request.getSession(false);
         try (PrintWriter out = response.getWriter()) {
@@ -23,16 +26,14 @@ public class Welcome extends HttpServlet {
             out.println("<title>Servlet Welcome</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h2>Welcome to RPISE " +session.getAttribute("username")+ "</h2>");
+            out.println("<h2>Welcome to RPISE "+session.getAttribute("username")+"</h2>");
             out.println("<ol>");
-            for(int i=1; i<=5; i++){
-                out.println("<li>"+ "<a href='Service"+ i + "'>" + ("Service" + i) + "</a>"+ "</li>");
-            }
+            out.println("<li> This is Service2 </li>");
             out.println("</ol>");
-            out.println("<a href='Logout'>Logout</a>");
+            out.println("<a href='Welcome' style='padding:20px'>Back </a>");
+            out.println("<a href='Logout' style='padding:20px'>Logout </a>");
             out.println("</body>");
             out.println("</html>");
         }
     }
 }
-
